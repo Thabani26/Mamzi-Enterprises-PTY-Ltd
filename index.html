@@ -377,6 +377,85 @@
     <img loading="lazy" src="image/IMG-20251101-WA0054.jpg" alt="IMG-20251101-WA0054" data-full="image/IMG-20251101-WA0054.jpg">
     <img loading="lazy" src="image/IMG-20251101-WA0055.jpg" alt="IMG-20251101-WA0055" data-full="image/IMG-20251101-WA0055.jpg">
   </div>
+
+<section id="products">
+  <h2>Our Work — Gallery</h2>
+
+  <!-- ✅ Sublimation Price List -->
+  <button class="collapse-btn" onclick="toggleSection('sublimationList')" style="background:#f47c20;color:white;padding:10px 15px;border:none;border-radius:6px;font-size:1rem;width:100%;text-align:left;margin-top:30px;">
+    ➕ Sublimation Printing Price List
+  </button>
+  <div id="sublimationList" class="collapse-content" style="display:none;">
+    <table class="price-list">
+      <tr><th>Item</th><th>Price (ZAR)</th><th></th></tr>
+      <tr><td>Custom Mug</td><td>R80</td>
+        <td><a href="https://wa.me/27646777469?text=Hi Mamzi Enterprises, I'm interested in Custom Mugs (Sublimation Printing)." target="_blank" class="btn" style="padding:5px 12px; font-size:0.9rem;">Get Quote</a></td>
+      </tr>
+      <tr><td>Keyholder</td><td>R50</td>
+        <td><a href="https://wa.me/27646777469?text=Hi Mamzi Enterprises, I'd like a Sublimation Keyholder." target="_blank" class="btn" style="padding:5px 12px; font-size:0.9rem;">Get Quote</a></td>
+      </tr>
+      <tr><td>T-shirt Print (A4)</td><td>R120</td>
+        <td><a href="https://wa.me/27646777469?text=Hi Mamzi Enterprises, I'm interested in a Sublimation T-shirt Print (A4 size)." target="_blank" class="btn" style="padding:5px 12px; font-size:0.9rem;">Get Quote</a></td>
+      </tr>
+      <tr><td>Photo Frame Print</td><td>R150</td>
+        <td><a href="https://wa.me/27646777469?text=Hi Mamzi Enterprises, I want a Sublimation Photo Frame Print." target="_blank" class="btn" style="padding:5px 12px; font-size:0.9rem;">Get Quote</a></td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- ✅ Engraving Price List -->
+  <button class="collapse-btn" onclick="toggleSection('engravingList')" style="background:#004aad;color:white;padding:10px 15px;border:none;border-radius:6px;font-size:1rem;width:100%;text-align:left;margin-top:20px;">
+    ➕ Laser Engraving Price List
+  </button>
+  <div id="engravingList" class="collapse-content" style="display:none;">
+    <table class="price-list">
+      <tr><th>Item</th><th>Price (ZAR)</th><th></th></tr>
+      <tr><td>Wooden Plaque</td><td>R250</td>
+        <td><a href="https://wa.me/27646777469?text=Hi Mamzi Enterprises, I'm interested in a Laser Engraved Wooden Plaque." target="_blank" class="btn" style="padding:5px 12px; font-size:0.9rem;">Get Quote</a></td>
+      </tr>
+      <tr><td>Glass Trophy</td><td>R300</td>
+        <td><a href="https://wa.me/27646777469?text=Hi Mamzi Enterprises, I'd like a Laser Engraved Glass Trophy." target="_blank" class="btn" style="padding:5px 12px; font-size:0.9rem;">Get Quote</a></td>
+      </tr>
+      <tr><td>Metal Flask</td><td>R180</td>
+        <td><a href="https://wa.me/27646777469?text=Hi Mamzi Enterprises, I'm interested in a Laser Engraved Metal Flask." target="_blank" class="btn" style="padding:5px 12px; font-size:0.9rem;">Get Quote</a></td>
+      </tr>
+      <tr><td>Pen with Name</td><td>R70</td>
+        <td><a href="https://wa.me/27646777469?text=Hi Mamzi Enterprises, I'd like a Laser Engraved Pen with my name." target="_blank" class="btn" style="padding:5px 12px; font-size:0.9rem;">Get Quote</a></td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- ✅ Gallery Section (unchanged, images clickable) -->
+  <div class="gallery" aria-label="product gallery">
+    <img loading="lazy" src="image/IMG-20251101-WA0026.jpg" alt="IMG-20251101-WA0026" data-full="image/IMG-20251101-WA0026.jpg">
+    <img loading="lazy" src="image/IMG-20251101-WA0027.jpg" alt="IMG-20251101-WA0027" data-full="image/IMG-20251101-WA0027.jpg">
+    <img loading="lazy" src="image/IMG-20251101-WA0028.jpg" alt="IMG-20251101-WA0028" data-full="image/IMG-20251101-WA0028.jpg">
+    <img loading="lazy" src="image/IMG-20251101-WA0029.jpg" alt="IMG-20251101-WA0029" data-full="image/IMG-20251101-WA0029.jpg">
+    <img loading="lazy" src="image/IMG-20251101-WA0030.jpg" alt="IMG-20251101-WA0030" data-full="image/IMG-20251101-WA0030.jpg">
+    <img loading="lazy" src="image/IMG-20251101-WA0031.jpg" alt="IMG-20251101-WA0031" data-full="image/IMG-20251101-WA0031.jpg">
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-hidden="true">
+    <div class="close" id="lbClose" title="Close">×</div>
+    <img id="lbImg" src="" alt="Preview">
+  </div>
+</section>
+
+<!-- ✅ JavaScript for collapsible behavior -->
+<script>
+  function toggleSection(id) {
+    const section = document.getElementById(id);
+    const button = event.target;
+    if (section.style.display === "none" || section.style.display === "") {
+      section.style.display = "block";
+      button.textContent = "➖ " + button.textContent.replace("➕ ", "");
+    } else {
+      section.style.display = "none";
+      button.textContent = "➕ " + button.textContent.replace("➖ ", "");
+    }
+  }
+</script>
   
   <!-- Lightbox -->
   <div class="lightbox" id="lightbox" role="dialog" aria-hidden="true">
